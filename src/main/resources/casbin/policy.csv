@@ -1,0 +1,9 @@
+p, admin, admin-thing*, .*
+p, admin, user-thing*, delete
+p, user, user-thing*, create|read|update|delete
+p, special-hat, special-thing*, .*
+
+g, myg-all, user
+g, admin, special-hat
+g, myg-techorg-all, admin
+g, svc_dxtest1, special-hat

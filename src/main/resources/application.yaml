@@ -1,0 +1,20 @@
+spring:
+  application:
+    name: "casbin-bloxlet-demo"
+
+blox:
+  oauth2:
+    authorization-servers:
+      - name: "dx-prod"
+        issuer-uri: "https://myriad.okta.com/oauth2/aus1aj0kjiu78WIUT357"
+        audiences: "https://applications.myriad.com/blox-server"
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health,info,metrics
+
+unauthenticated:
+  endpoint:
+    antmatchers: "/endpoints,/v3/api-docs/**,/configuration/ui,/swagger-resources/**,/configuration/security,/swagger-ui.html,/swagger-ui/**,/webjars/**"

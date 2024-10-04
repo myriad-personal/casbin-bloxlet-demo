@@ -1,0 +1,22 @@
+blox:
+  oauth2:
+    authorization-servers:
+      - name: "dx-test"
+        issuer-uri: "https://myriad.okta.com/oauth2/ausqm6yrog9OXpHL7356"
+        audiences: "https://applications.myriad.com/blox-server"
+
+logging:
+  level:
+    com.myriad: "DEBUG"
+    com.myriad.blox.spring.authz: "TRACE"
+    org.springframework.security: "TRACE"
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health,info,metrics,env,loggers,heapdump,threaddump
+
+unauthenticated:
+  endpoint:
+    antmatchers: "/actuator/**,/endpoints,/v3/api-docs/**,/configuration/ui,/swagger-resources/**,/configuration/security,/swagger-ui.html,/swagger-ui/**,/webjars/**"
